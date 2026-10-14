@@ -81,7 +81,7 @@ litellm:
   model: openai/acme-agent
   apiBase: http://litellm.litellm.svc.cluster.local:4000
   credentialsSecretName: acme-agent-litellm
-  vaultKey: secret/data/global/acme-agent-litellm
+  vaultKey: global/acme-agent-litellm
   vaultProperty: api-key
   existingSecret:
     name: ""
