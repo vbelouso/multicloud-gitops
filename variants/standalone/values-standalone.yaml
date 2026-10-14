@@ -140,9 +140,9 @@ clusterGroup:
       overrides:
         # Vault paths for the admin/DB passwords defined in values-secret.yaml.template
         - name: keycloak.adminUser.passwordVaultKey
-          value: secret/data/global/rhbk
+          value: global/rhbk
         - name: keycloak.postgresqlDb.passwordVaultKey
-          value: secret/data/global/rhbk
+          value: global/rhbk
         - name: keycloak.spiffeIdentityProvider.enabled
           value: "true"
     keycloak-oidc:
@@ -208,7 +208,7 @@ clusterGroup:
         # against the running realm on every sync, so it applies even though
         # this realm imported before the override existed.
         - name: keycloak.consoleClientSecretVaultKey
-          value: secret/data/global/rhbk
+          value: global/rhbk
         # Creates a human user in this realm, in keycloak.adminGroupName
         # above (-> cluster-admin), with an initial password from Vault --
         # see keycloak.consoleAdminUser in charts/all/keycloak-oidc/values.yaml.
@@ -218,7 +218,7 @@ clusterGroup:
         - name: keycloak.consoleAdminUser.enabled
           value: "true"
         - name: keycloak.consoleAdminUser.passwordVaultKey
-          value: secret/data/global/rhbk
+          value: global/rhbk
 
         # Federate the acme-agent/lightspeed-mcp confidential clients'
         # authentication against SPIRE's OIDC discovery provider, so
